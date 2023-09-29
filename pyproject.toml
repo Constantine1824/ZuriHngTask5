@@ -7,7 +7,7 @@ authors = ["Ayomide <ayomidet905@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.7"
 Django = "^3.0"
-django-rest-framework = "^0.1.0"
+gunicorn = "^21.2.0"
 
 [tool.poetry.dev-dependencies]
 
