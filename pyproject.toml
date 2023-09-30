@@ -5,9 +5,11 @@ description = ""
 authors = ["Ayomide <ayomidet905@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.8"
 Django = "^3.0"
 gunicorn = "^21.2.0"
+djangorestframework = "^3.14.0"
+django-cors-headers = "^4.2.0"
 
 [tool.poetry.dev-dependencies]
 
