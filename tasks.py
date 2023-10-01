@@ -4,14 +4,8 @@ from django.conf import settings
 import whisper
 
 print('working')
-connection = pika.BlockingConnection(pika.ConnectionParameters(
-    host=settings.RABBITMQ_HOST,
-    port=settings.RABBITMQ_PORT,
-    credentials=pika.PlainCredentials(
-        username=settings.RABBITMQ_USER,
-        password=settings.RABBITMQ_PASSWORD,
-    ),
-))
+connection = pika.BlockingConnection(pika.URLParameters(settings.RABBITMQ_URL)
+)
 
 channel = connection.channel()
 channel.queue_declare(queue=settings.RABBITMQ_QUEUE_NAME)
