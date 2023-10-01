@@ -6,7 +6,6 @@ pip install --upgrade pip
 pip install --upgrade setuptools wheel
 
 poetry install
-poetry add whisper
 
 python tasks.py 
 python manage.py collectstatic --no-input
