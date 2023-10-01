@@ -7,5 +7,5 @@ pip install --upgrade setuptools wheel
 
 poetry install
 
-python tasks.py 
+python core/tasks.py 
 python manage.py collectstatic --no-input
