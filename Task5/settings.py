@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -124,6 +124,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
+#media
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -131,3 +135,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #CORS
 CORS_ORIGIN_ALLOW_ALL = True
+
+#RABBITMQ
+RABBITMQ_HOST= os.environ.get('RABBITMQ_HOST')
+RABBITMQ_PORT = os.environ.get('RABBITMQ_PORT')
+RABBITMQ_USER = os.environ.get('RABBITMQ_USER')
+RABBITMQ_PASSWORD = os.environ.get('RABBITMQ_PASSWORD')
+RABBITMQ_QUEUE_NAME = 'transcribe'

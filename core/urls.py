@@ -1,6 +1,8 @@
 from django.urls import path
-from .views import receive_file
+from .views import create,update
 
 urlpatterns = [
-    path('upload', receive_file, name='upload')
+    # path('upload', receive_file, name='upload'),
+    path('create', create, name='Create-file'),
+    path('update', update, name='update-file')
 ]
