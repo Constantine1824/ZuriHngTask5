@@ -7,4 +7,3 @@ pip install --upgrade setuptools wheel
 
 poetry install
 
-python manage.py collectstatic --no-input
