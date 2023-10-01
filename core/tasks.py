@@ -3,6 +3,7 @@ from moviepy.editor import VideoFileClip
 from django.conf import settings
 import whisper
 
+print('working')
 connection = pika.BlockingConnection(pika.ConnectionParameters(
     host=settings.RABBITMQ_HOST,
     port=settings.RABBITMQ_PORT,
