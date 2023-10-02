@@ -5,21 +5,6 @@ from rest_framework.response import Response
 import pika
 from django.conf import settings
 import tasks
-import selectors
-
-
-# @api_view(http_method_names=['POST'])
-# def receive_file(request):
-#     try:
-#         handle_file(request.FILES['file'])
-#         response = {
-#                 'status': 'saved'
-#             }
-#         return Response(response, status=201)
-#     except Exception as e:
-#         print(e)
-#         return HttpResponseServerError()
-    
 
 @api_view(http_method_names=['POST'])
 def create(request):

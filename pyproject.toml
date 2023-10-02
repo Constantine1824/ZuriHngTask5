@@ -14,6 +14,8 @@ channels = "^4.0.0"
 pika = "^1.3.2"
 moviepy = "^1.0.3"
 whisper = "^1.1.10"
+whitenoise = "^6.5.0"
+drf-yasg = "^1.21.7"
 
 [tool.poetry.dev-dependencies]
 

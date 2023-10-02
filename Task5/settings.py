@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'whitenoise.runserver_nostatic',
     'core'
 ]
 
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'corsheaders.middleware.CorsMiddleware'
 ]
 
@@ -128,6 +130,8 @@ STATIC_URL = '/static/'
 #media
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -143,3 +147,4 @@ RABBITMQ_USER = os.environ.get('RABBITMQ_USER')
 RABBITMQ_PASSWORD = os.environ.get('RABBITMQ_PASSWORD')
 RABBITMQ_URL = os.environ.get('RABBITMQ_URL')
 RABBITMQ_QUEUE_NAME = 'transcribe'
+
