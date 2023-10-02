@@ -77,5 +77,3 @@ def on_channel_open(channel):
 def on_queue_declared(channel):
     channel.basic_consume(queue=settings.RABBITMQ_QUEUE_NAME, on_message_callback=process_message)
 
-if __name__ == '__main__':
-    main()
